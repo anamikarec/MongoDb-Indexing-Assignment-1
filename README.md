@@ -89,3 +89,10 @@
 
 
 > ***3. Insufficient Available System Memory (RAM)***
+
+> 5:~
+
+```js
+      db.listing.find().sort({price:1, accommodates:1}).explain("executionStats");
+
+```
