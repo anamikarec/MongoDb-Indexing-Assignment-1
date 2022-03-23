@@ -90,6 +90,10 @@
 
 > ***3. Insufficient Available System Memory (RAM)***
 
+> 4:~ 
+
+- In MongoDB, the compound index can contain a single hashed index field, if a field contains more than one hashed index field then MongoDB will give an error.
+      
 > 5:~
 
 ```js
