@@ -66,3 +66,17 @@
     db.listing.find({"address.country_code":"BR"}).explain("executionStats");
     // rejectedPlans: []
 ```
+
+### Part:~2
+
+#### Ques:~1 do a compound index
+#### Ques:~2 explain pros and cons of compound index
+#### Ques:~3 explain prefix requirements for compound index
+#### Ques:~4 when does compound index not work?
+#### Ques:~5 apply compound index on 3 fields that are commonly searched in airbnb, and query those fields and sort them to see explain
+> 1
+
+
+```js
+      db.airbnb.createIndex({"price":1,"accommodates":-1});
+```
