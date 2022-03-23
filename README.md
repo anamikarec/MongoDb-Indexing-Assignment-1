@@ -55,4 +55,15 @@
     // totalDocsExamined: 1068
 ```
 
+> (v)
 
+```js
+      db.listing.createIndex({"address.country_code":1});
+```
+
+> (vi)
+
+```js
+    db.airbnb.find({"address.country_code":"BR"}).explain("executionStats");
+    // rejectedPlans: []
+```
