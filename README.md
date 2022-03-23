@@ -74,9 +74,18 @@
 #### Ques:~3 explain prefix requirements for compound index
 #### Ques:~4 when does compound index not work?
 #### Ques:~5 apply compound index on 3 fields that are commonly searched in airbnb, and query those fields and sort them to see explain
-> 1
+> 1:~
 
 
 ```js
-      db.airbnb.createIndex({"price":1,"accommodates":-1});
+      db.listing.createIndex({"price":1,"accommodates":-1});
 ```
+> 2:~
+
+> ***1. Applications may encounter reduced performance during index builds, including limited read/write access to the collection.***
+
+
+> ***2. Building indexes during time periods where the target collection is under heavy write load can result in reduced write performance and longer index builds.***
+
+
+> ***3. Insufficient Available System Memory (RAM)***
